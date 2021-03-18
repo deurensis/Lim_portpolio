@@ -970,7 +970,6 @@ content: '';
 }
 #main .section3 .s3_inner .mobile_list {
     float: left;
-    padding-top: 180px;
 }
 #main .section3 .s3_inner .mobile_list .mobile_list1 a::after {
     background: url('../images/section3/coexaqua_logo.png') no-repeat center center;
@@ -981,10 +980,18 @@ content: '';
     background-size: 40%;
 }
 #main .section3 .s3_inner .mobile_list .mobile_list2 a::after {
+    background: url('../images/section3/samhwa_log.png') no-repeat center center;
+    background-size: 40%;
+}
+#main .section3 .s3_inner .mobile_list .mobile_list2:hover a::after {
+    background: url('../images/section3/samhwa_log.png') no-repeat center center;
+    background-size: 40%;
+}
+#main .section3 .s3_inner .mobile_list .mobile_list3 a::after {
     background: url('../images/section3/subway_log.png') no-repeat center center;
     background-size: 30%;
 }
-#main .section3 .s3_inner .mobile_list .mobile_list3 a::after {
+#main .section3 .s3_inner .mobile_list .mobile_list4 a::after {
     background: url('../images/section3/zools_logo.png') no-repeat center center;
     background-size: 30%;
 }
@@ -998,10 +1005,14 @@ content: '';
     background-size: 100% 100%;
 }
 #main .section3 .s3_inner .mobile_list .mobile_list2:hover a::before {
-    background: url('../images/section3/subway_main.jpg') no-repeat;
+    background: url('../images/section3/samhwa_main.jpg') no-repeat;
     background-size: 100% 100%;
 }
 #main .section3 .s3_inner .mobile_list .mobile_list3:hover a::before {
+    background: url('../images/section3/subway_main.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+#main .section3 .s3_inner .mobile_list .mobile_list4:hover a::before {
     background: url('../images/section3/zools_main.jpg') no-repeat;
     background-size: 100% 100%;
 }
