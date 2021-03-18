@@ -42,9 +42,6 @@ $(function(){
   });
 
 
-
-
-
   // 페인트 아이디어 슬라이더
 
   const swiper = new Swiper('.paint_slide', {
@@ -75,5 +72,12 @@ $(function(){
         el: '.swiper-scrollbar',
       },
     });
+
+
+    // 탑 이동 버튼
+
+    $('.btn_top').click(function(){
+      $('body,html').animate({scrollTop:0},500);
+    })
 
 });
