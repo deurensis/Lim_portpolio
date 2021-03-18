@@ -13,10 +13,87 @@
     <script src="./js/main.js"></script>
 </head>
 <body>
+    <div class="gnb">
+        <h2><a href="./index.html"><img src="./images/logo_red.png" alt="삼화로고"></a></h2>
+        <button type="button" class="btn_gnb_close">메뉴 닫기</button>
+        <ul class="gnb_list">
+            <li>
+                <a href="javascript:;">회사소개</a>
+                <ul class="depth2">
+                    <li><a href="javascript:;">회사소개</a></li>
+                    <li><a href="javascript:;">사업영역</a></li>
+                    <li><a href="javascript:;">사업장</a></li>
+                    <li><a href="javascript:;">주요 개열사</a></li>
+                    <li><a href="javascript:;">대리점안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">제품소개</a>
+                <ul class="depth2">
+                    <li><a href="javascript:;">제품소개</a></li>
+                    <li><a href="javascript:;">제품자료</a></li>
+                    <li><a href="javascript:;">제품홍보</a></li>
+                    <li><a href="javascript:;">전문가 기술지원</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">컬러</a>
+                <ul class="depth2">
+                    <li><a href="javascript:;">NCS 컬러</a></li>
+                    <li><a href="javascript:;">페인트아이디어</a></li>
+                    <li><a href="javascript:;">컬러디자인센터 소개</a></li>
+                    <li><a href="javascript:;">컨축컬러디자인</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">투자정보</a>
+                <ul class="depth2">
+                    <li><a href="javascript:;">재무정보</a></li>
+                    <li><a href="javascript:;">주가정보</a></li>
+                    <li><a href="javascript:;">공고</a></li>
+                    <li><a href="javascript:;">배당현황</a></li>
+                    <li><a href="javascript:;">IR미팅 신청</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">홍보센터</a>
+                <ul class="depth2">
+                    <li><a href="javascript:;">#Live</a></li>
+                    <li><a href="javascript:;">함께해요</a></li>
+                    <li><a href="javascript:;">뉴스</a></li>
+                    <li><a href="javascript:;">공지사항</a></li>
+                    <li><a href="javascript:;">삼화앤피플</a></li>
+                    <li><a href="javascript:;">고객상담</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">인재채용</a>
+                <ul class="depth2">
+                    <li><a href="javascript:;">인재상</a></li>
+                    <li><a href="javascript:;">인사제도</a></li>
+                    <li><a href="javascript:;">채용공고</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="gnb_info">
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/icon-pin-gnb.png" alt="대리점 찾기 아이콘">
+                    <span>대리점 찾기</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <img src="./images/icon-cs-gnb.png" alt="고객상담 아이콘">
+                    <span>고객상담</span>
+                </a>
+            </li>
+        </ul>
+    </div>
     <div id="header">
-        <a href="javascript:;" class="header_gnb_open"><img src="./images/btn_gnb_open2.png" alt="메뉴 열기"></a>
-        <h1><a href="./index.html"><img src="./images/logo_white.png" alt="삼화 페인트 로고"></a></h1>
-        <a href="javascript:;" class="header_search"><img src="./images/head_search2.png" alt="검색"></a>
+        <a href="javascript:;" class="header_gnb_open">메뉴 열기</a>
+        <h1><a href="./index.html">삼화 페인트 로고</a></h1>
+        <a href="javascript:;" class="header_search">검색</a>
     </div>
     <div id="main">
         <div class="visual_wrap">
@@ -34,7 +111,7 @@
                 </ul>
                 <div class="search_box">
                     <button type="button" class="btn_search"><img src="./images/ico_search_small.png" alt="검색 버튼"></button>
-                    <input type="text" placeholder="검색어를 입력해주세요">
+                    <input type="text" placeholder="검색어를 입력해주세요" class="search_input">
                 </div>
             </div>
             <div class="search_keyword">
@@ -236,8 +313,57 @@
         <div class="stock_wrap">
             <h2>삼화페인트 000390</h2>
             <span class="stock">12,350</span>
-            <span class="price">▲400 (+3.35%)</span>
+            <span class="stock_change">▲400 (+3.35%)</span>
         </div>
+        <div class="info">
+            <h2>고객지원</h2>
+            <ul class="info_list">
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/icon-pin.png" alt="대리점 찾기 아이콘">
+                        <span>대리점 찾기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <img src="./images/icon-cs.png" alt="고객상담 아이콘">
+                        <span>고객상담</span>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="btn_top">페이지 맨 위로</button>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="addre">
+            <h2>Technical Service Center</h2>
+            <span class="tele">1544-5357</span>
+            <address>
+                삼화페인트공업(주)<br>
+                대표이사 : 오진수, 김장연<br>
+                서울본사 : 소울 종로구 돈화문로 58(묘동)<br>
+                안산공장 : 경기도 안산시 단원구 벌망로 178(성곡동)<br>
+                ⓒ 2020 Samhwa Paint Industrial Co, Ltd.<br>
+                All Right Reserved.
+            </address>
+        </div>
+        <div class="follow">
+            <h3>Follow</h3>
+            <ul class="f_sns_list">
+                <li><a href="javascript:;"><img src="./images/foot_sns_insta.png" alt="인스타그램"></a></li>
+                <li><a href="javascript:;"><img src="./images/foot_sns_youtube.png" alt="유튜브"></a></li>
+                <li><a href="javascript:;"><img src="./images/foot_sns_blog.png" alt="블로그"></a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn_family_site">Family Site</button>
+        <ul class="family_site_list">
+            <li><a href="javascript:;">홈앤톤즈</a></li>
+            <li><a href="javascript:;">컬러디자인센터</a></li>
+            <li><a href="javascript:;">파우톤 분체도료</a></li>
+            <li><a href="javascript:;">카로클 자동차 도료</a></li>
+            <li><a href="javascript:;">삼화페인트 구매포털</a></li>
+            <li><a href="javascript:;">대리점전용 시스템</a></li>
+        </ul>
     </div>
 </body>
 </html>
