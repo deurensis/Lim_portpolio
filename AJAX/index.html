@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대우학교 성적표</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="./js/vue.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+        table {
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        table th,
+        table td {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #000;
+        }
+        table th {
+            background: gray;
+        }
+        table td {
+            background: #F6F6F6;
+        }
+        table td:first-child {
+            background: #EAEAEA;
+        }
+        .btn_wrap {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>대우학교 1반 성적표</h1>
+    <div id="app">
+        <table>
+            <thead>
+                <tr v-for='head in header'>
+                    <th>{{head.number}}</th>
+                    <th>{{head.name}}</th>
+                    <th>{{head.sub1}}</th>
+                    <th>{{head.sub2}}</th>
+                    <th>{{head.sub3}}</th>
+                    <th>{{head.sub4}}</th>
+                    <th>{{head.sub5}}</th>
+                    <th>{{head.sub6}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for='(st,index) in stud' :key='index'>
+                    <td>{{index+1}}</td>
+                    <td>{{st.name}}</td>
+                    <td>{{st.gender}}</td>
+                    <td>{{st.kor}}</td>
+                    <td>{{st.his}}</td>
+                    <td>{{st.meth}}</td>
+                    <td>{{st.eng}}</td>
+                    <td>{{st.che}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn_wrap">
+            <button type="button" @click='plusData()'>데이터 추가</button>
+            <button type="button" @click='deleData()'>데이터 삭제</button>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                header: [
+                    {
+                        number: '출석번호',
+                        name: '이름',
+                        sub1: '성별',
+                        sub2: '국어',
+                        sub3: '국사',
+                        sub4: '수학',
+                        sub5: '영어',
+                        sub6: '화학',
+                    }
+                ],
+                stud: [
+                    {
+                        name: '이인포',
+                        gender: '남자',
+                        kor: 98,
+                        his: 85,
+                        meth: 100,
+                        eng: 75,
+                        che: 70,
+                    },
+                    {
+                        name: '손포아',
+                        gender: '남자',
+                        kor: 100,
+                        his: 98,
+                        meth: 60,
+                        eng: 55,
+                        che: 50,
+                    },
+                    {
+                        name: '김모포',
+                        gender: '남자',
+                        kor: 100,
+                        his: 91,
+                        meth: 95,
+                        eng: 54,
+                        che: 55,
+                    },
+                    {
+                        name: '김아아',
+                        gender: '여자',
+                        kor: 95,
+                        his: 94,
+                        meth: 94,
+                        eng: 89,
+                        che: 56,
+                    },
+                    {
+                        name: '인포모',
+                        gender: '여자',
+                        kor: 99,
+                        his: 88,
+                        meth: 93,
+                        eng: 97,
+                        che: 54,
+                    },
+                    {
+                        name: '인포아',
+                        gender: '남자',
+                        kor: 96,
+                        his: 84,
+                        meth: 95,
+                        eng: 95,
+                        che: 53,
+                    },
+                    {
+                        name: '모아인',
+                        gender: '여자',
+                        kor: 99,
+                        his: 90,
+                        meth: 98,
+                        eng: 70,
+                        che: 552,
+                    },
+                    {
+                        name: '정포모',
+                        gender: '여자',
+                        kor: 99,
+                        his: 93,
+                        meth: 97,
+                        eng: 88,
+                        che: 78,
+                    },
+                    {
+                        name: '이포모',
+                        gender: '남자',
+                        kor: 83,
+                        his: 85,
+                        meth: 82,
+                        eng: 83,
+                        che: 84,
+                    },
+                ],
+            },
+            methods: {
+                plusData(){
+                    this.stud.push({
+                        name: '파커누',
+                        gender: '남자',
+                        kor: 100,
+                        his: 100,
+                        meth: 100,
+                        eng: 100,
+                        che: 100,
+                    });
+                },
+                deleData(){
+                    this.stud.pop();
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비ncs(ajax)</title>
+    <script src="./js/vue.js"></script>
+    <style>
+        ul {
+            overflow: hidden;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>배열데이터를 이용하여 동적 데이터 처리</h1>
+        <ul>
+            <!-- <li v-for='item in jobs'>{{item.tit}} : {{item.year}}<br>
+            <li v-for='item in jobs'>{{경력연수}}</li> -->
+            <li v-for='(item,index) in jobs' :key='index'>
+               {{index+1}} {{item.tit}} : {{item.year}}년
+            </li>
+        </ul>
+        <button type="button" @click='pushData()'>데이터추가</button>
+        <button type="button" @click='deleData()'>데이터삭제</button>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                jobs:[
+                    {
+                        tit: '웹 기획자',
+                        year: 10,
+                    },
+                    {
+                        tit: '웹 관리자',
+                        year: 8,
+                    },
+                    {
+                        tit: '웹 개발자',
+                        year: 6,
+                    },
+                    {
+                        tit: '웹 퍼블리셔',
+                        year: 3,
+                    },
+                    {
+                        tit: '웹 디자인',
+                        year: 1,
+                    },
+                ],
+            },
+            methods: {
+                pushData(){
+                    this.jobs.push({tit: '웹 보조자', year: 8,});
+                },
+                deleData(){
+                    this.jobs.pop();
+                }
+            }
+        })
+    </script>
+</body>
+</html>
