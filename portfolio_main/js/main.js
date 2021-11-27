@@ -17,6 +17,10 @@ $(function(){
         let respon_scroll = $('#section4_area').offset().top;
         $('body,html').animate({scrollTop:respon_scroll},300);
     });
+    $('.btn_craft').click(function(){
+        let respon_scroll = $('#section_craft_area').offset().top;
+        $('body,html').animate({scrollTop:respon_scroll},300);
+    });
     $('.btn_contact').click(function(){
         let respon_scroll = $('#section5_area').offset().top;
         $('body,html').animate({scrollTop:respon_scroll},300);
